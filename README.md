@@ -2,9 +2,9 @@
 
 **Pontificia Universidad Javeriana · 2026-II · Docente: Pedro Ardila**
 
-> **Estudiante:** [escribe aquí tu nombre completo]
-> **Nombre del proyecto:** [escribe aquí el nombre de tu herramienta]
-> **Fecha de inicio:** [AAAA-MM-DD]
+> **Estudiante: Luisa Fernanda Díaz Díaz
+> **Nombre del proyecto: Asistente de reclamaciones en salud
+> **Fecha de inicio: 2026-08-22
 
 ---
 
@@ -22,26 +22,40 @@ Bienvenido/a a tu repositorio de proyecto. **Este archivo es tu tablero de mando
 
 ### 1.1 El problema jurídico
 ¿Qué problema **real del derecho colombiano** resuelve tu herramienta? ¿Quién lo sufre hoy y cómo lo resuelve sin tu herramienta?
-
+1. Muchas personas enfrentan barreras para acceder oportunamente a servicios de salud.
+2. Los usuarios suelen desconocer los derechos que tienen frente a su EPS.
+3. También existe confusión sobre dónde y como presentar una reclamación.
+4. Sin herramientas, el usuario debe investigar por su cuenta qué mecanismo puede utilizar.
+5. Puede acudir a su EPS, presentar una PQRD ante la Supersalud o buscar asesoría jurídica.
+6. La herramienta busca facilitar este proceso, explicando los derechos y orientado sobre la ruta de reclamación adecuada.
 ### 1.2 Usuarios
 ¿Quién va a usarla? Describe a tu usuario ideal en una frase (ej. *"un arrendatario bogotano que le subieron el canon de arrendamiento más del límite legal"*). Recuerda que al final necesitas **al menos un usuario real** que la pruebe.
+Mi usuario ideal es una persona afiliada al sistema de salud colombiano que enfrenta una barrera de acceso a un servicio de salud y no sabe si debe reclamar ante su EPS, acudir a la Supersalud o presentar una acción de tutela.
 
 ### 1.3 Qué hace y qué NO hace (alcance)
 | ✅ Sí hace | ❌ No hace |
 | --- | --- |
-| [funcionalidad 1] | [fuera de alcance 1] |
-| [funcionalidad 2] | [fuera de alcance 2] |
+| Identifica posibles derechos relacionados con el caso. | No reemplaza a un abogado|
+| Explica las normas aplicables| No garantiza que el usuario gane la tutela |
+| Analiza si corresponde acudir inicialmente a la EPS | No decide judicialmente el caso|
+| Orienta sobre una PQRD ante Supersalud| No representa al usuario ante una entidad|
+| Identifica posibles escenarios en los que puede ser necesaria la tutela | No presenta automáticamente a tutela ante un juez|
+| Genera un borrador de reclamación/PQRD/tutela | No inventa hechos, pruebas ni diagnósticos médicos|
 
 *Consejo de abogado: un alcance pequeño y perfecto vale más que uno grande y roto.*
 
 ### 1.4 Marco jurídico y fuentes
 ¿Qué normas alimentan tu herramienta? Lista tu corpus normativo (leyes, decretos, sentencias — debe ser **pequeño y público**):
-- [ ] Norma/sentencia 1: [nombre + enlace]
-- [ ] Norma/sentencia 2: [nombre + enlace]
+- [ ] Norma/sentencia 1: Ley 1751 de 2015 + http://www.secretariasenado.gov.co/senado/basedoc/ley_1751_2015.html]
+- [ ] Norma/sentencia 2: Constitución política de Colombia de 1991, artículos 49 y 86 + https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=4125]
+- [ ] Norma/sentencia 3: Decreto 2591 de 1991 + http://www.secretariasenado.gov.co/senado/basedoc/decreto_2591_1991.html
+- [ ] Norma/sentencia 4: Superintendencia Nacional de Salud-PQRD + https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=4125
+      
 
 ### 1.5 Nombre y lema
 Un nombre corto para tu herramienta y una frase que explique qué hace (la usarás en la demo del día de presentaciones).
-
+Nombre: 
+Lema:
 ---
 
 ## 🗺️ Parte 2 — Plan de desarrollo
