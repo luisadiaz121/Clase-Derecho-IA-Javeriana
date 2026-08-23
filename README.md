@@ -54,8 +54,8 @@ Mi usuario ideal es una persona afiliada al sistema de salud colombiano que enfr
 
 ### 1.5 Nombre y lema
 Un nombre corto para tu herramienta y una frase que explique qué hace (la usarás en la demo del día de presentaciones).
-Nombre: 
-Lema:
+Nombre: RutaSalud
+Lema: Conoce tus derechos, encuentra tu ruta y reclama.
 ---
 
 ## 🗺️ Parte 2 — Plan de desarrollo
