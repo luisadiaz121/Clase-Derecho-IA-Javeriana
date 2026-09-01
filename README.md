@@ -101,16 +101,17 @@ Todo es **gratuito y no exige tarjeta de crédito**. Tu proyecto final debería 
 > 🔑 **Regla de oro:** tu `OPENROUTER_API_KEY` va en una **variable de entorno**, jamás pegada en el código ni en el chat. Si una clave se filtra en GitHub, revócala de inmediato en openrouter.ai → Keys.
 
 Pídele a tu agente de IA que te explique esta arquitectura con tu proyecto concreto antes de escribir una línea de código.
+
 [Pregunta del usuario]
-↓
+           ↓
 [LangChain recibe la pregunta]
-↓
+           ↓
 [Se busca información en el corpus jurídico]
-↓
+           ↓
 [Se construye el prompt]
-↓
+           ↓
 [Se llama al modelo]
-↓
+           ↓
 [El modelo genera la respuesta]
 
 Herramientas selecionadas
