@@ -115,6 +115,7 @@ Pídele a tu agente de IA que te explique esta arquitectura con tu proyecto conc
 
 Herramientas selecionadas
 | Componente | Herramienta | Función |
+|---|---|---|
 | Interfaz web| Streamlit | Permite que el usuario interactue con el asistente, escriba su problema y reciba la orientación jurídica |
 | Orquestación | LangChain| Conecta la pregunta del usuario con el corpus normativo y el modelo de IA, organizando el proceso para generar la respuesta|
 | Modelo (LLM) | OpenRouter| Proporciona el modelo de lenguaje que analiza la información y genera la respuesta al usuario|
