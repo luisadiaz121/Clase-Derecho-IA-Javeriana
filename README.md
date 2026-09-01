@@ -101,7 +101,43 @@ Todo es **gratuito y no exige tarjeta de crédito**. Tu proyecto final debería 
 > 🔑 **Regla de oro:** tu `OPENROUTER_API_KEY` va en una **variable de entorno**, jamás pegada en el código ni en el chat. Si una clave se filtra en GitHub, revócala de inmediato en openrouter.ai → Keys.
 
 Pídele a tu agente de IA que te explique esta arquitectura con tu proyecto concreto antes de escribir una línea de código.
+[Pregunta del usuario]
+↓
+[LangChain recibe la pregunta]
+↓
+[Se busca información en el corpus jurídico]
+↓
+[Se construye el prompt]
+↓
+[Se llama al modelo]
+↓
+[El modelo genera la respuesta]
 
+Herramientas selecionadas
+| Componente | Herramienta | Función |
+| Interfaz web| Streamlit | Permite que el usuario interactue con el asistente, escriba su problema y reciba la orientación jurídica |
+| Orquestación | LangChain| Conecta la pregunta del usuario con el corpus normativo y el modelo de IA, organizando el proceso para generar la respuesta|
+| Modelo (LLM) | OpenRouter| Proporciona el modelo de lenguaje que analiza la información y genera la respuesta al usuario|
+| Memoria de fuentes RAG | Chroma o FAISS | Almacena y permite consultar el corpus normativo del proyecto para que las respuestas se fundamenten en las normas seleccionadas y no únicamente en el conocimiento general del modelo.
+| Trazabilidad | LangSmith | Permite visualizar y revisar lo que ocurre durante cada respuesta, como las consultas, los pasos de procesamiento y la respuesta final, para detectar errores y depurar la herramienta|
+
+Funcionamiento previsto
+* El usuario describe su problema relacionado con el acceso a un servicio de salud.
+* La herramienta identifica los hechos relevantes y los posibles derechos involucrados.
+* Si falta información necesaria, realiza preguntas antes de orientar al usuario.
+* Consulta el corpus normativo para fundamentar la respuesta.
+* Determina si la ruta inicial podría ser una reclamación ante la EPS, una PQRD ante Supersalud o, según las circunstancias, una acción de tutela.
+* Explica al usuario los pasos que puede seguir y los documentos que podrían ser útiles.
+* Cuando el usuario lo solicite, genera un borrador de reclamación, PQRD o tutela utilizando únicamente la información proporcionada.
+
+Seguridad y privacidad
+
+* La herramienta no solicita ni utiliza información personal que no sea necesaria para orientar el caso.
+* No inventa hechos, pruebas, diagnósticos médicos ni información personal del usuario.
+* La información proporcionada por el usuario se utiliza únicamente para analizar el caso y elaborar la orientación o documento solicitado.
+* Se recomienda al usuario no compartir contraseñas, datos bancarios u otra información personal innecesaria.
+* La herramienta aclara que su orientación no reemplaza la asesoría de un abogado ni garantiza el resultado de una reclamación o acción de tutela.
+* Los documentos generados deben ser revisados por el usuario antes de ser presentados ante cualquier entidad o autoridad.
 ---
 
 ## 🚀 Parte 4 — Ruta de despliegue
