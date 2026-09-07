@@ -66,16 +66,16 @@ Marca cada hito cuando lo termines. Los hitos siguen las sesiones del curso.
 - [ ] **M1 — Asistente con instrucciones v1** *(Sesión 1–2)*: redactaste las instrucciones (prompt de sistema) de tu asistente y funcionan en una herramienta gratuita de chat.
 - [ ] **M2 — Casos de prueba documentados** *(Sesión 2)*: tienes al menos 5 casos de prueba (donde antes fallaba) con resultados guardados en `docs/casos-de-prueba.md`.
 - [ ] **M3 — Corpus conectado (RAG)** *(Sesión 3)*: tu asistente **cita la fuente** normativa que usa y no inventa. Corpus cargado en `corpus/`.
-- [ ] **M4 — Interfaz web desplegada** *(Sesión 4)*: tu herramienta tiene **URL pública** (ver Parte 4) y tu primer usuario real la probó con evidencia.
+- [x] **M4 — Interfaz web desplegada** *(Sesión 4)*: tu herramienta tiene **URL pública** (ver Parte 4) y tu primer usuario real la probó con evidencia.
 - [ ] **M5 — Análisis crítico y demo** *(Sesión 5)*: Parte 7 completada + presentación de 5 minutos.
 
 ### Bitácora de avance semanal
 | Semana | Qué hice | Enlace/captura | Dudas para la clase |
 | --- | --- | --- | --- |
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
+| 1 | Delimitación del problema jurídico y alcance de RutaSalud | README Partes 1 y 2 | Ninguna |
+| 2 | Definición de instrucciones del asistente y normatividad base | Ley 1751/2015 | Ninguna |
+| 3 | Estructuración de rutas jurídicas (EPS, Supersalud, Tutela) | Código fuente | Ninguna |
+| 4 | Despliegue de la interfaz web en Vercel con URL pública activa | [asistente-de-reclamaciones-en-salud-eta.vercel.app](https://asistente-de-reclamaciones-en-salud-eta.vercel.app) | Ninguna |
 | 5 | | | |
 
 ---
@@ -162,10 +162,10 @@ Si necesitas algo que Vercel no ofrece (ej. procesos de fondo, bases de datos pe
 - **Docker local:** tu agente puede escribir un `Dockerfile` para que el proyecto corra igual en cualquier máquina. Útil para demostraciones sin internet, pero **no cumple el requisito de URL pública** — combínalo con A o B.
 
 ### Checklist de despliegue ✅
-- [ ] URL pública funciona en el navegador de otra persona (pídele a alguien que la abra)
-- [ ] La advertencia de la Parte 7 es **visible** en la interfaz
-- [ ] No hay API keys ni secretos en el código (verifica con una búsqueda de `sk-` en el repo)
-- [ ] Anota la URL aquí: **`[tu-url-publica]`**
+- [x] URL pública funciona en el navegador de otra persona (pídele a alguien que la abra)
+- [x] La advertencia de la Parte 7 es **visible** en la interfaz
+- [x] No hay API keys ni secretos en el código (verifica con una búsqueda de `sk-` en el repo)
+- [x] Anota la URL aquí: **`https://asistente-de-reclamaciones-en-salud-eta.vercel.app`**
 
 > El dominio propio (.com, .co) **no es necesario** — la URL gratuita de Vercel/Render es suficiente para el curso.
 
