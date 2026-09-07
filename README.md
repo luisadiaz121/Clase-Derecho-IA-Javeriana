@@ -46,10 +46,11 @@ Mi usuario ideal es una persona afiliada al sistema de salud colombiano que enfr
 
 ### 1.4 Marco jurídico y fuentes
 ¿Qué normas alimentan tu herramienta? Lista tu corpus normativo (leyes, decretos, sentencias — debe ser **pequeño y público**):
-- [ ] Norma/sentencia 1: Ley 1751 de 2015 + http://www.secretariasenado.gov.co/senado/basedoc/ley_1751_2015.html]
-- [ ] Norma/sentencia 2: Constitución política de Colombia de 1991, artículos 49 y 86 + https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=4125]
-- [ ] Norma/sentencia 3: Decreto 2591 de 1991 + http://www.secretariasenado.gov.co/senado/basedoc/decreto_2591_1991.html
-- [ ] Norma/sentencia 4: Superintendencia Nacional de Salud-PQRD + https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=4125
+- [x] Norma 1: Ley 1751 de 2015 (Ley Estatutaria de Salud) — [`corpus/01_ley_1751_2015_estatutaria_salud.md`](corpus/01_ley_1751_2015_estatutaria_salud.md)
+- [x] Norma 2: Constitución Política de Colombia de 1991, arts. 23, 44, 49 y 86 — [`corpus/02_constitucion_politica_arts_49_86.md`](corpus/02_constitucion_politica_arts_49_86.md)
+- [x] Norma 3: Decreto 2591 de 1991 (Reglamentario de la Tutela) — [`corpus/03_decreto_2591_1991_reglamentario_tutela.md`](corpus/03_decreto_2591_1991_reglamentario_tutela.md)
+- [x] Norma 4: Superintendencia Nacional de Salud (Trámite PQRD y vigilancia) — [`corpus/04_supersalud_pqrd_procedimiento.md`](corpus/04_supersalud_pqrd_procedimiento.md)
+- [x] Jurisprudencia: Sentencias T-760 de 2008 y SU-508 de 2020 (Corte Constitucional) — [`corpus/05_jurisprudencia_corte_constitucional.md`](corpus/05_jurisprudencia_corte_constitucional.md)
       
 
 ### 1.5 Nombre y lema
@@ -62,10 +63,10 @@ Lema: Conoce tus derechos, encuentra tu ruta y reclama.
 
 Marca cada hito cuando lo termines. Los hitos siguen las sesiones del curso.
 
-- [ ] **M0 — Descripción y plan** *(con Sesión 1)*: Partes 1 y 2 de este README completas.
-- [ ] **M1 — Asistente con instrucciones v1** *(Sesión 1–2)*: redactaste las instrucciones (prompt de sistema) de tu asistente y funcionan en una herramienta gratuita de chat.
+- [x] **M0 — Descripción y plan** *(con Sesión 1)*: Partes 1 y 2 de este README completas.
+- [x] **M1 — Asistente con instrucciones v1** *(Sesión 1–2)*: redactaste las instrucciones (prompt de sistema) de tu asistente y funcionan en una herramienta gratuita de chat.
 - [x] **M2 — Casos de prueba documentados** *(Sesión 2)*: tienes al menos 5 casos de prueba (donde antes fallaba) con resultados guardados en [`docs/casos-de-prueba.md`](docs/casos-de-prueba.md).
-- [ ] **M3 — Corpus conectado (RAG)** *(Sesión 3)*: tu asistente **cita la fuente** normativa que usa y no inventa. Corpus cargado en `corpus/`.
+- [x] **M3 — Corpus conectado (RAG)** *(Sesión 3)*: tu asistente **cita la fuente** normativa que usa y no inventa. Corpus cargado en [`corpus/`](corpus/).
 - [x] **M4 — Interfaz web desplegada** *(Sesión 4)*: tu herramienta tiene **URL pública** (ver Parte 4) y tu primer usuario real la probó con evidencia.
 - [ ] **M5 — Análisis crítico y demo** *(Sesión 5)*: Parte 7 completada + presentación de 5 minutos.
 
@@ -74,7 +75,7 @@ Marca cada hito cuando lo termines. Los hitos siguen las sesiones del curso.
 | --- | --- | --- | --- |
 | 1 | Delimitación del problema jurídico y alcance de RutaSalud | README Partes 1 y 2 | Ninguna |
 | 2 | Casos de prueba documentados (5 casos resueltos y fundamentados) | [`docs/casos-de-prueba.md`](docs/casos-de-prueba.md) | Ninguna |
-| 3 | Estructuración de rutas jurídicas (EPS, Supersalud, Tutela) | Código fuente | Ninguna |
+| 3 | Carga y estructuración del corpus normativo en `corpus/` (Ley 1751, CP, Dcto 2591, Supersalud y Sentencias) | [`corpus/`](corpus/) | Ninguna |
 | 4 | Despliegue de la interfaz web en Vercel con URL pública activa | [asistente-de-reclamaciones-en-salud-eta.vercel.app](https://asistente-de-reclamaciones-en-salud-eta.vercel.app) | Ninguna |
 | 5 | | | |
 
