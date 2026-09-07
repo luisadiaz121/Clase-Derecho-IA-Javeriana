@@ -1,0 +1,15 @@
+# Variables de entorno y secretos
+.env
+.env.local
+.env.*.local
+
+# Vercel
+.vercel
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Sistema operativo
+.DS_Store
+Thumbs.db

@@ -1,0 +1,9 @@
+{
+  "name": "rutasalud",
+  "version": "1.0.0",
+  "description": "Asistente de reclamaciones en salud - Proyecto Javeriana",
+  "type": "module",
+  "scripts": {
+    "start": "serve ."
+  }
+}

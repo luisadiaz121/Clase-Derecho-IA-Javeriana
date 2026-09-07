@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RutaSalud — Conoce tus derechos, encuentra tu ruta y reclama</title>
+    <meta name="description" content="Asistente de reclamaciones en salud basado en la Ley 1751 de 2015 y jurisprudencia colombiana. Determina si acudir a EPS, Supersalud o Tutela.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lora:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Encabezado y Navbar -->
+    <header class="site-header">
+        <div class="container header-content">
+            <div class="brand">
+                <div class="brand-icon">⚖️🏥</div>
+                <div>
+                    <h1 class="brand-title">RutaSalud</h1>
+                    <p class="brand-slogan">Conoce tus derechos, encuentra tu ruta y reclama</p>
+                </div>
+            </div>
+            <div class="academic-tag">
+                <span>Pontificia Universidad Javeriana</span>
+                <small>Derecho e Inteligencia Artificial · 2026-II</small>
+            </div>
+        </div>
+    </header>
+
+    <!-- Advertencia Ética Obligatoria (Parte 6 del README) -->
+    <section class="disclaimer-section">
+        <div class="container">
+            <div class="disclaimer-card" role="alert">
+                <div class="disclaimer-icon">⚠️</div>
+                <div class="disclaimer-body">
+                    <strong>Ejercicio Académico — Advertencia Legal Obligatoria:</strong>
+                    <p>Esta herramienta es un ejercicio académico que <strong>no constituye asesoría legal ni sustituye la consulta con un abogado</strong>. No garantiza el resultado judicial o administrativo de ninguna reclamación ni tutela. Para la protección de tus datos (Ley 1581 de 2012), <em>no ingreses contraseñas ni datos sensibles reales</em>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contenido Principal -->
+    <main class="container main-layout">
+        <!-- Panel Izquierdo: Formulario del Caso -->
+        <section class="panel case-panel">
+            <div class="panel-header">
+                <h2>📋 1. Describe tu situación de salud</h2>
+                <p>Indica qué barrera estás enfrentando para que analicemos tu caso con base en la <strong>Ley 1751 de 2015</strong>.</p>
+            </div>
+
+            <form id="case-form" class="case-form">
+                <!-- Selector rápido de problema común -->
+                <div class="form-group">
+                    <label class="form-label" for="issue-type">¿Qué problema tienes con el servicio de salud?</label>
+                    <select id="issue-type" class="form-control" required>
+                        <option value="">-- Selecciona una situación --</option>
+                        <option value="medicamentos">Demora o negación de entrega de medicamentos (pos o no pos)</option>
+                        <option value="cita_especialista">Demora injustificada en cita médica con especialista</option>
+                        <option value="cirugia_procedimiento">Negación o aplazamiento de cirugía o procedimiento médico</option>
+                        <option value="urgencias">Negación de atención en urgencias o cobro irregular</option>
+                        <option value="transporte">Falta de cobertura de transporte / viáticos para tratamiento médico</option>
+                        <option value="otro">Otro problema de acceso o continuidad del servicio</option>
+                    </select>
+                </div>
+
+                <!-- Nombre de la EPS -->
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label class="form-label" for="eps-name">¿Cuál es tu EPS / Entidad de Salud?</label>
+                        <input type="text" id="eps-name" class="form-control" placeholder="Ej: Nueva EPS, Sanitas, Compensar, Famisanar..." required>
+                    </div>
+                    <div class="form-group col">
+                        <label class="form-label" for="has-order">¿Cuentas con orden médica de tu doctor?</label>
+                        <select id="has-order" class="form-control">
+                            <option value="si">Sí, tengo la orden médica escrita</option>
+                            <option value="no">No, aún no me la han expedido</option>
+                            <option value="en_tramite">Fue radicada pero no han autorizado</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Estado de gravedad y trámite previo -->
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label class="form-label" for="prior-claim">¿Ya hiciste una queja o petición a la EPS?</label>
+                        <select id="prior-claim" class="form-control">
+                            <option value="no">No, es la primera vez que reclamo</option>
+                            <option value="si_sin_respuesta">Sí, pero ya pasaron más de 5 días hábiles sin respuesta</option>
+                            <option value="si_negada">Sí, y me negaron formalmente el servicio</option>
+                        </select>
+                    </div>
+                    <div class="form-group col">
+                        <label class="form-label" for="urgency-level">¿Existe riesgo inminente a la vida o integridad?</label>
+                        <select id="urgency-level" class="form-control">
+                            <option value="moderada">Riesgo moderado (deterioro progresivo de la salud)</option>
+                            <option value="inminente">Riesgo inminente/vital (requiere atención o medicamento urgente ya)</option>
+                            <option value="sujeto_especial">Es para un sujeto de especial protección (niño, adulto mayor, enfermedad huérfana/catastrófica)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Detalle en palabras propias -->
+                <div class="form-group">
+                    <label class="form-label" for="case-details">Detalla brevemente tu caso:</label>
+                    <textarea id="case-details" class="form-control" rows="4" placeholder="Describe qué servicio requieres, desde cuándo lo estás esperando y qué respuesta te ha dado la entidad..." required></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" id="btn-analyze" class="btn btn-primary btn-block">
+                        <span class="btn-text">Analizar Caso y Determinar Ruta Jurídica 🔍</span>
+                        <span class="spinner hidden" id="spinner"></span>
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Panel Derecho: Ruta Determinada, Fundamento y Borrador -->
+        <section class="panel results-panel" id="results-panel">
+            <div class="panel-placeholder" id="placeholder-view">
+                <div class="placeholder-icon">🧭</div>
+                <h3>Tu orientación jurídica aparecerá aquí</h3>
+                <p>Completa el formulario de la izquierda con los datos de tu caso para que <strong>RutaSalud</strong> analice los derechos involucrados, defina la vía procedente y elabore el borrador de reclamación.</p>
+            </div>
+
+            <div class="results-content hidden" id="results-view">
+                <!-- Tarjeta de la Ruta Sugerida -->
+                <div class="route-badge-container">
+                    <span class="route-tag" id="route-category-badge">Ruta Determinada</span>
+                    <h3 class="route-title" id="route-title-text">Cargando...</h3>
+                    <p class="route-summary" id="route-summary-text"></p>
+                </div>
+
+                <!-- Pestañas de Resultados -->
+                <div class="tabs-nav">
+                    <button class="tab-btn active" data-tab="tab-analisis">⚖️ Análisis y Normas</button>
+                    <button class="tab-btn" data-tab="tab-documento">📄 Borrador del Documento</button>
+                    <button class="tab-btn" data-tab="tab-pasos">📌 Pasos a Seguir</button>
+                </div>
+
+                <!-- Pestaña 1: Análisis Jurídico -->
+                <div class="tab-content active" id="tab-analisis">
+                    <div class="legal-box" id="legal-analysis-box">
+                        <!-- Contenido dinámico -->
+                    </div>
+
+                    <div class="citations-box">
+                        <h4>📚 Fuentes y Marco Normativo Aplicable:</h4>
+                        <ul id="citations-list">
+                            <!-- Se llena dinámicamente -->
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Pestaña 2: Borrador del Documento -->
+                <div class="tab-content" id="tab-documento">
+                    <div class="doc-header-notice">
+                        <small>💡 Este borrador incluye los hechos y fundamentos de derecho listos. Revisa y completa los datos entre corchetes <code>[EN MAYÚSCULAS]</code> antes de radicarlo.</small>
+                    </div>
+
+                    <div class="document-preview-wrapper">
+                        <div class="doc-actions-bar">
+                            <span class="doc-type-label" id="doc-type-label">Borrador</span>
+                            <div>
+                                <button type="button" class="btn-sm btn-secondary" id="btn-copy-doc">📋 Copiar texto</button>
+                                <button type="button" class="btn-sm btn-secondary" id="btn-download-doc">💾 Descargar (.txt)</button>
+                            </div>
+                        </div>
+                        <pre class="document-preview" id="document-text"></pre>
+                    </div>
+                </div>
+
+                <!-- Pestaña 3: Pasos a Seguir -->
+                <div class="tab-content" id="tab-pasos">
+                    <div class="steps-timeline" id="steps-timeline">
+                        <!-- Pasos dinámicos -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p><strong>RutaSalud</strong> — Proyecto Final para el curso <em>Derecho e Inteligencia Artificial</em> (Pontificia Universidad Javeriana).</p>
+            <p>Estudiante: Luisa Fernanda Díaz Díaz · Docente: Pedro Ardila · 2026-II</p>
+            <p class="footer-sub">Diseñado bajo la metodología de <em>Vibe Coding</em> con respeto al marco constitucional colombiano y la Ley 1751 de 2015.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
