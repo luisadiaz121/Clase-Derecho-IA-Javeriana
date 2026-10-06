@@ -216,13 +216,20 @@ Estas salvaguardas son **obligatorias** y hacen parte de la evaluación:
 
 - **Advertencia visible obligatoria.** Tu interfaz debe mostrar, en lugar visible:
   > *"Esta herramienta es un ejercicio académico que no constituye asesoría legal ni sustituye la consulta con un abogado."*
-  - [ ] Implementada y visible en la interfaz
+  - [x] Implementada y visible en la interfaz  
+  *Cumplimiento:* La advertencia está fijada de manera permanente en la parte superior de la aplicación web ([`index.html`](index.html)) dentro de un recuadro de alerta visible (`.disclaimer-card`), advirtiendo al usuario antes de formular cualquier consulta.
+
 - **Protección de datos (Ley 1581 de 2012).** Tu herramienta **no recolecta ni almacena datos personales reales** de usuarios de prueba. Los usuarios de prueba usan situaciones ficticias o datos inventados.
-  - [ ] Verificado: no guardo datos personales
+  - [x] Verificado: no guardo datos personales  
+  *Cumplimiento:* La herramienta no cuenta con bases de datos ni almacena registros en servidores. El análisis ocurre en memoria efímera y los borradores generados usan campos genéricos entre corchetes (`[NOMBRE COMPLETO]`, `[CÉDULA]`, `[DIRECCIÓN]`), garantizando que los datos sensibles nunca salgan del dispositivo del usuario.
+
 - **Corpus público.** Solo fuentes públicas: leyes, decretos, jurisprudencia publicada.
-  - [ ] Verificado
+  - [x] Verificado  
+  *Cumplimiento:* El 100% de las fuentes normativas y jurisprudenciales son de acceso público y provienen de repositorios oficiales del Estado colombiano (Secretaría del Senado, Función Pública y Corte Constitucional), documentadas en la carpeta [`corpus/`](corpus/).
+
 - **Anti-alucinaciones.** El asistente debe citar la fuente de cada afirmación jurídica y admitir cuando no la tiene.
-  - [ ] Casos de prueba donde la herramienta se niega a inventar
+  - [x] Casos de prueba donde la herramienta se niega a inventar  
+  *Cumplimiento:* Se diseñaron prompts de sistema restrictivos en `api/chat.js` y reglas determinísticas en `script.js` que obligan a citar el artículo exacto (ej. Art. 10 lit. c de la Ley 1751/15) y prohíben inventar diagnósticos médicos. Los resultados se verificaron en los 5 escenarios de [`docs/casos-de-prueba.md`](docs/casos-de-prueba.md).
 
 ---
 
